@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="30dp"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <EditText
+        android:id="@+id/editInjury"
+        android:inputType="text"
+        android:singleLine="true"
+        android:background="@drawable/grid_back"
+        android:paddingLeft="30dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingRight="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tell us your problem here.." />
+
+    <EditText
+        android:id="@+id/etSex"
+        android:background="@drawable/grid_back"
+        android:paddingLeft="30dp"
+        android:paddingTop="15dp"
+        android:singleLine="true"
+        android:paddingBottom="15dp"
+        android:paddingRight="15dp"
+        android:layout_marginTop="10dp"
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editInjury"
+        android:hint="Sex" />
+
+    <EditText
+        android:id="@+id/editBloodGrp"
+        android:singleLine="true"
+        android:background="@drawable/grid_back"
+        android:paddingLeft="30dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingRight="15dp"
+        android:layout_marginTop="10dp"
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etSex"
+        android:hint="Blood Group" />
+
+    <Button
+        android:id="@+id/chooseDoc"
+        android:background="@android:color/holo_purple"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:textColor="#fff"
+        android:text="Choose Image"
+        android:layout_below="@id/editBloodGrp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp"
+        android:id="@+id/InjuryImage"
+        android:layout_above="@id/btnUpload"
+        android:layout_below="@id/chooseDoc"/>
+
+    <Button
+        android:id="@+id/btnUpload"
+        android:background="@android:color/holo_purple"
+        android:textColor="#fff"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SEND" />
+
+
+
+</RelativeLayout>

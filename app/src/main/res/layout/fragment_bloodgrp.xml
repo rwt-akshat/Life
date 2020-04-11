@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="20dp"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:id="@+id/BGName"
+        android:singleLine="true"
+        android:layout_height="wrap_content"
+        android:hint="Name"/>
+
+    <EditText
+        android:id="@+id/BGAge"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:singleLine="true"
+        android:layout_height="wrap_content"
+        android:hint="Age"/>
+
+    <EditText
+        android:id="@+id/BGPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:layout_margin="10dp"
+        android:hint="Phone Number"/>
+
+    <EditText
+        android:id="@+id/BGRq"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:layout_margin="10dp"
+        android:hint="Blood Group Required"/>
+
+
+    <EditText
+        android:id="@+id/BGDes"
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content"
+        android:hint="Description(optional)"/>
+
+
+    <Button
+        android:background="@android:color/holo_purple"
+        android:textColor="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_margin="10dp"
+        android:id="@+id/btnSend"
+        android:text="Send"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
