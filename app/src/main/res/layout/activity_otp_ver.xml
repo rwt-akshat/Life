@@ -78,7 +78,6 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/editTextCode"
             android:layout_marginTop="30dp"
-            android:foregroundTint="?attr/selectableItemBackground"
             android:background="@android:color/holo_purple"
             android:text="Sign In"
             android:textAllCaps="false"

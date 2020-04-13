@@ -144,7 +144,7 @@ class DoctorDetailsActivity : AppCompatActivity() {
                 }
             }
             .addOnFailureListener {
-                Toast.makeText(this, "ERROR!!", Toast.LENGTH_LONG).show()
+                Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()
             }
     }
 
