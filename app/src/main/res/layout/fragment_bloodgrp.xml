@@ -1,58 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:padding="20dp"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_margin="10dp"
-        android:id="@+id/BGName"
-        android:singleLine="true"
-        android:layout_height="wrap_content"
-        android:hint="Name"/>
-
-    <EditText
-        android:id="@+id/BGAge"
-        android:layout_width="match_parent"
-        android:layout_margin="10dp"
-        android:singleLine="true"
-        android:layout_height="wrap_content"
-        android:hint="Age"/>
-
-    <EditText
-        android:id="@+id/BGPhone"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:singleLine="true"
-        android:layout_margin="10dp"
-        android:hint="Phone Number"/>
+        app:cardCornerRadius="2dp"
+        app:cardElevation="3dp"
+        app:cardUseCompatPadding="true">
 
-    <EditText
-        android:id="@+id/BGRq"
+        <EditText
+            android:id="@+id/BGName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@android:color/white"
+            android:hint="Name"
+            android:inputType="text" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:singleLine="true"
-        android:layout_margin="10dp"
-        android:hint="Blood Group Required"/>
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="3dp"
+        app:cardUseCompatPadding="true">
 
 
-    <EditText
-        android:id="@+id/BGDes"
+        <EditText
+            android:id="@+id/BGAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@android:color/white"
+            android:hint="Age"
+            android:inputType="number" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_margin="10dp"
         android:layout_height="wrap_content"
-        android:hint="Description(optional)"/>
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="3dp"
+        app:cardUseCompatPadding="true">
 
+
+        <EditText
+            android:id="@+id/BGPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@android:color/white"
+            android:hint="Phone Number"
+            android:inputType="phone" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="3dp"
+        app:cardUseCompatPadding="true">
+
+        <Spinner
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:paddingEnd="10dp"
+            android:id="@+id/bg_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="3dp"
+        app:cardUseCompatPadding="true">
+
+
+        <EditText
+            android:id="@+id/BGDes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@android:color/white"
+            android:hint="Description(optional)"
+            android:inputType="text" />
+
+    </androidx.cardview.widget.CardView>
 
     <Button
-        android:background="@android:color/holo_purple"
-        android:textColor="@android:color/white"
-        android:layout_width="wrap_content"
-        android:layout_margin="10dp"
         android:id="@+id/btnSend"
-        android:text="Send"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_height="wrap_content"/>
+        android:layout_marginTop="20dp"
+        android:text="Send" />
 
 </LinearLayout>

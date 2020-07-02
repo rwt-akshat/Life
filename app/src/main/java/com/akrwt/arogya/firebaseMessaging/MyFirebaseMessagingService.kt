@@ -12,8 +12,7 @@ import android.media.RingtoneManager
 import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
-import com.akrwt.arogya.MainActivity
-import com.akrwt.arogya.R
+import com.akrwt.arogya.activity.MainActivity
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 import java.util.*

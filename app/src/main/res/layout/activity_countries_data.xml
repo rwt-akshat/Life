@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.akrwt.arogya.fragments.DashboardFragment.Coronavirus.CountriesData">
+    tools:context="com.akrwt.arogya.activity.CountriesDataActivity">
 
         <com.github.mikephil.charting.charts.HorizontalBarChart
             android:layout_width="match_parent"

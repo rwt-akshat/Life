@@ -12,7 +12,7 @@ import android.provider.MediaStore
 import android.util.Base64
 import android.widget.Toast
 import androidx.core.graphics.drawable.toBitmap
-import com.akrwt.arogya.MainActivity
+import com.akrwt.arogya.activity.MainActivity
 import com.akrwt.arogya.R
 import com.google.firebase.auth.FirebaseAuth
 import com.squareup.picasso.Picasso
@@ -85,8 +85,9 @@ class UserInfoActivity : AppCompatActivity() {
 
                     Toast.makeText(applicationContext, "Details Saved", Toast.LENGTH_LONG)
                         .show()
-
-                    startActivity(Intent(this, MainActivity::class.java))
+                    val intent = Intent(this, MainActivity::class.java)
+                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    startActivity(intent)
 
                 }
             }

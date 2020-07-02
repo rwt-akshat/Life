@@ -1,39 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
-    tools:context=".SplashActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/imageView"
-        android:layout_centerInParent="true"
-        android:layout_marginBottom="20dp"
-        android:fontFamily="sans-serif-condensed"
-        android:text="First wealth is health"
-        android:textColor="@android:color/holo_purple"
-        android:textSize="20sp" />
+    tools:context=".activity.SplashActivity">
 
     <ImageView
+        android:tint="@color/colorPrimaryDark"
         android:id="@+id/imageView"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="200dp"
-        android:layout_centerInParent="true"
-        android:scaleType="centerInside"
-        android:src="@drawable/heart" />
+        android:src="@drawable/heart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <ProgressBar
-        android:id="@+id/progressbar"
-        style="?android:progressBarStyle"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:layout_below="@+id/imageView"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:indeterminateTint="@android:color/holo_purple" />
+    <TextView
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center_horizontal"
+        android:textSize="25sp"
+        android:textColor="#0F626C"
+        android:text="Life"/>
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

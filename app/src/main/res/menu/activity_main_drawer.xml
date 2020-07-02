@@ -1,45 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:showIn="navigation_view">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <group android:checkableBehavior="single">
+    <group
+        android:id="@+id/group1"
+        android:checkableBehavior="single">
         <item
             android:id="@+id/nav_dashboard"
             android:icon="@drawable/ic_dashboard"
-            android:title="Dashboard" />
+            android:title="Dashboard"
+            app:actionViewClass="android.widget.TextView" />
 
         <item
-            android:id="@+id/nav_maps"
-            android:icon="@drawable/ic_pin"
-            android:title="Know your location" />
-        <item
-            android:id="@+id/nav_inj"
+            android:id="@+id/nav_contact_docs"
             android:icon="@drawable/ic_detail"
-            android:title="Contact Doctors" />
+            android:menuCategory="secondary"
+            android:title="Contact Doctors"
+            app:actionViewClass="android.widget.TextView" />
+
         <item
-            android:id="@+id/nav_bloodreq"
+            android:id="@+id/nav_blood_req"
             android:icon="@drawable/ic_bpressure"
-            android:title="Blood Required" />
+            android:menuCategory="secondary"
+            android:title="Blood Required"
+            app:actionViewClass="android.widget.TextView" />
 
     </group>
 
-    <item android:title="Communicate">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_share"
-                android:title="Share" />
-            <item
-                android:id="@+id/nav_sign_out"
-                android:icon="@drawable/ic_logout"
-                android:title="Log out" />
-            <item
-                android:id="@+id/feedbck"
-                android:icon="@drawable/ic_feedback"
-                android:title="Feedback" />
+    <group
+        android:id="@+id/group2"
+        android:checkableBehavior="single">
 
-        </menu>
-    </item>
+        <item
+            android:id="@+id/nav_share"
+            app:actionViewClass="android.widget.TextView"
+            android:icon="@drawable/ic_share"
+            android:menuCategory="secondary"
+            android:title="Share" />
+
+
+        <item
+            app:actionViewClass="android.widget.TextView"
+            android:id="@+id/feedback"
+            android:icon="@drawable/ic_feedback"
+            android:menuCategory="secondary"
+            android:title="Feedback" />
+
+
+        <item
+            app:actionViewClass="android.widget.TextView"
+            android:id="@+id/nav_sign_out"
+            android:icon="@drawable/ic_logout"
+            android:menuCategory="secondary"
+            android:title="Log out" />
+
+    </group>
 
 </menu>

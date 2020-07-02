@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/grid_back"
+    android:layout_width="match_parent"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="4dp"
+    android:focusable="true"
+    android:clickable="true"
+    android:foreground="?selectableItemBackground"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/dashboard_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/background" />
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/dashboard_name"
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:text="Sample"/>
+
+        <View
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:text="Check here"
+            android:textSize="16sp"
+            android:padding="5dp"
+            android:id="@+id/card_text"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

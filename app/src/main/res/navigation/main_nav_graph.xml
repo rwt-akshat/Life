@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/nav_dashboard">
+
+    <fragment
+        android:id="@+id/nav_dashboard"
+        android:name="com.akrwt.arogya.fragments.DashBoardFragment"
+        android:label="DashBoard" />
+    <fragment
+        android:id="@+id/nav_blood_req"
+        android:name="com.akrwt.arogya.fragments.BloodReqFragment"
+        android:label="Blood Required" />
+    <fragment
+        android:id="@+id/nav_contact_docs"
+        android:name="com.akrwt.arogya.DoctorsFragment"
+        android:label="Ask Doctors" />
+    <fragment
+        android:id="@+id/feedback"
+        android:name="com.akrwt.arogya.fragments.FeedbackFragment"
+        android:label="Feedback" />
+    <fragment
+        android:id="@+id/coronavirusFragment"
+        android:name="com.akrwt.arogya.fragments.CoronavirusFragment"
+        android:label="Coronavirus" />
+    <fragment
+        android:id="@+id/accidentFragment"
+        android:name="com.akrwt.arogya.fragments.AccidentFragment"
+        android:label="Accident"
+        tools:layout="@layout/fragment_accident" />
+    <fragment
+        android:id="@+id/vehicleImpactFragment"
+        android:name="com.akrwt.arogya.fragments.VehicleImpactFragment"
+        android:label="Vehicle Impact"
+        tools:layout="@layout/fragment_vehicle_impact" />
+    <fragment
+        android:id="@+id/ambulanceFragment"
+        android:name="com.akrwt.arogya.fragments.AmbulanceFragment"
+        android:label="Ambulance" />
+    <fragment
+        android:id="@+id/addFriendsFragment"
+        android:name="com.akrwt.arogya.fragments.AddFriendsFragment"
+        android:label="Add Friends" />
+    <fragment
+        android:id="@+id/askDoctorDetailsFragment"
+        android:name="com.akrwt.arogya.fragments.AskDoctorDetailsFragment"
+        android:label="Ask Doctor" />
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.akrwt.arogya.fragments.AboutFragment"
+        android:label="About"
+        tools:layout="@layout/fragment_about" />
+</navigation>

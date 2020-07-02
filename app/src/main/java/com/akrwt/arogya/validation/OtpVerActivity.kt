@@ -17,15 +17,9 @@ import java.util.concurrent.TimeUnit
 
 class OtpVerActivity : AppCompatActivity() {
 
-
     private var mVerificationId: String? = null
-
-    //firebase auth object
     private var mAuth: FirebaseAuth? = null
 
-
-
-    //the callback to detect the verification status
     private val mCallbacks = object : PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
         override fun onVerificationCompleted(phoneAuthCredential: PhoneAuthCredential) {
 
@@ -59,28 +53,20 @@ class OtpVerActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_otp_ver)
 
-        //initializing objects
         mAuth = FirebaseAuth.getInstance()
 
-
-        //getting mobile number from the previous activity
-        //and sending the verification code to the number
         if(intent.hasExtra("mobile")) {
 
             val mobile = intent.getStringExtra("mobile")
             sendVerificationCode(mobile)
         }
 
-
-        //if the automatic sms detection did not work, user can also enter the code manually
-        //so adding a click listener to the button
         buttonSignIn.setOnClickListener {
             val code = editTextCode.text.toString()
             if (code.isEmpty() || code.length < 6) {
                 Toast.makeText(applicationContext, "Code is not valid", Toast.LENGTH_LONG).show()
             } else {
 
-                //verifying the code entered manually
                 verifyVerificationCode(code)
             }
         }
@@ -113,6 +99,7 @@ class OtpVerActivity : AppCompatActivity() {
                         val mobile = intent.getStringExtra("mobile")
                         val intent = Intent(this@OtpVerActivity, UserInfoActivity::class.java)
                         intent.putExtra("phone",mobile)
+                        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
                         startActivity(intent)
                         finish()
                     }
